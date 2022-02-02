@@ -1,16 +1,14 @@
 # About the project
 
-This is typescript template for various NodeJS projects. Template contains ESLint, Prettier and Nodemon.
+This is telegraf template for Telegram bots. Template contains Telegraf (with I18n and rate limit), ESLint, Prettier and Nodemon.
 
 # Installation
 
-1. Click the 'Use this template' button and follow instructions OR `git clone https://github.com/idrevnii/typescript-template`
+1. Click the 'Use this template' button and follow instructions OR `git clone https://github.com/idrevnii/telegraf-template`
 
 2. Change the project name in `package.json' and you can start write your code :)
 
-# Usage
-
-## Commands
+# Commands
 
 All commands below are written with `yarn` but you can also use `npm run`.
 
