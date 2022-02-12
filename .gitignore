@@ -1,3 +1,5 @@
-/node_modules
-/logs
+node_modules
+logs
 .env
+prisma/*
+!prisma/schema.prisma

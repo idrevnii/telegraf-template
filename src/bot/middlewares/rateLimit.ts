@@ -1,14 +1,14 @@
 import { logger } from '../../logger/logger'
-import { IContext } from '../models'
-import { identificateUser } from '../utils'
+import { Context } from '../models'
+import { whois } from './helpers'
 const rateLimit = require('telegraf-ratelimit')
 
-export function getRateLimitMiddleware() {
+export function attachRateLimit() {
   return rateLimit({
     window: 3000,
     limit: 1,
-    onLimitExceeded: ({ answerCbQuery, from, updateType, i18n }: IContext) => {
-      logger.info(`Flood from: ${identificateUser(from)}`)
+    onLimitExceeded: ({ answerCbQuery, from, updateType, i18n }: Context) => {
+      logger.info(`Flood from: ${whois(from)}`)
       if (updateType === 'callback_query') {
         answerCbQuery(i18n.t('stop_flood'))
       }
