@@ -6,6 +6,6 @@ export const i18n = new I18n({
   directory: path.resolve(__dirname, './../locales')
 })
 
-export function getI18nMiddleware() {
+export function attachI18n() {
   return i18n.middleware()
 }

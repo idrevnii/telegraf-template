@@ -1,7 +1,7 @@
-import { IContext } from '../models'
+import { Context } from '../models'
 
-export async function startHandler({ from, i18n, reply }: IContext) {
+export async function startHandler({ from, replyWithLocalization }: Context) {
   if (from?.id) {
-    reply(i18n.t('start_message'))
+    replyWithLocalization('start_message')
   }
 }

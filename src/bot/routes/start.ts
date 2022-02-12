@@ -1,8 +1,8 @@
 import { Router } from 'telegraf'
 import { startHandler } from '../handlers/start'
-import { IContext } from '../models'
+import { Context } from '../models'
 
-export const startRoute = new Router<IContext>(({ from, message }) => {
+export const startRoute = new Router<Context>(({ from, message }) => {
   if (from?.id) {
     if (message?.text === '/start') {
       return {
