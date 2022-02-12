@@ -6,7 +6,7 @@ This is telegraf template for Telegram bots. Template contains Telegraf (with I1
 
 1. Click the 'Use this template' button and follow instructions OR `git clone https://github.com/idrevnii/telegraf-template`
 
-2. Change the project name in `package.json' and you can start write your code :)
+2. Change the project name in `package.json` and you can start write your code :)
 
 # Commands
 
