@@ -1,12 +1,12 @@
 # About the project
 
-This is telegraf template for Telegram bots. Template contains Telegraf (with I18n and rate limit), Database (based on Prisma with SQLite), Logging (Winston), ESLint, Prettier and Nodemon.
+This is telegraf template for Telegram bots. Template contains Telegraf (with I18n and rate limit), Database (based on SQLite with Prisma), Logging (Winston), ESLint, Prettier and Nodemon.
 
 # Installation
 
 1. Click the 'Use this template' button and follow instructions OR `git clone https://github.com/idrevnii/telegraf-template`
 
-2. Change the project name in `package.json` and you can start write your code :)
+2. Change the project name in `package.json` and in `src/logger/logger.ts`, and create a `.env` with `BOT_TOKEN` and you can start writing code :)
 
 # Commands
 
