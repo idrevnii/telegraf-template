@@ -1,6 +1,6 @@
 # About the project
 
-This is telegraf template for Telegram bots. Template contains Telegraf (with I18n and rate limit), ESLint, Prettier and Nodemon.
+This is telegraf template for Telegram bots. Template contains Telegraf (with I18n and rate limit), Database (based on Prisma with SQLite), Logging (Winston), ESLint, Prettier and Nodemon.
 
 # Installation
 
