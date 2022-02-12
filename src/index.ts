@@ -1,9 +1,10 @@
 import { initBot, stopBot } from './bot/app'
-import { initDatabase } from './db/init'
+import { initDatabase, stopDatabase } from './db/init'
 import { logger } from './logger/logger'
 
 async function gracefulStop() {
   await stopBot()
+  await stopDatabase()
 }
 
 async function main() {

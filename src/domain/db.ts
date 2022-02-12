@@ -1,24 +1,26 @@
+import { User } from '@prisma/client'
 import { users } from '../db/init'
-import { User } from '../db/models'
-import { logger } from '../logger/logger'
 
-export function insertUser(user: User) {
-  return users.insert(user)
+export async function insertUser(user: Omit<User, 'createdAt'>) {
+  return users.create({ data: { ...user } })
 }
 
-export function findUser(userId: number) {
-  return users.findOne({ userId }, (err, doc) => {
-    if (!err) {
-      return doc
-    }
+export async function findUser(userId: number) {
+  return users.findUnique({ where: { userId } })
+}
+
+export async function updateUser(userId: number, update: Partial<User>) {
+  return users.update({ where: { userId }, data: update })
+}
+
+export async function deleteUser(userId: number) {
+  return users.delete({ where: { userId } })
+}
+
+export async function findOrCreateUser(userId: number) {
+  return users.upsert({
+    where: { userId },
+    update: {},
+    create: { userId, language: 'en' }
   })
-}
-
-export function updateUser(userId: number, update: Partial<User>) {
-  if (db.data?.users) {
-    const user = findUser(userId)
-    if (user) {
-      return db.data.users.
-    }
-  }
 }
