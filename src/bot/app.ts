@@ -8,9 +8,7 @@ import { attachUser } from './middlewares/user'
 import { Context } from './models'
 import { startRoute } from './routes/start'
 
-export const bot = new Telegraf<Context>(
-  process.env.BOT_TOKEN || '5171313100:AAG6rjOWJq2_d9YX6GEpTRsEN_UlBCJY-I0'
-)
+export const bot = new Telegraf<Context>(process.env.BOT_TOKEN || '')
 
 export async function initBot() {
   bot
