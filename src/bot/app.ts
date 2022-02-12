@@ -12,9 +12,9 @@ export const bot = new Telegraf<Context>(process.env.BOT_TOKEN || '')
 
 export async function initBot() {
   bot
+    .use(attachHelpers)
     .use(attachI18n())
     .use(attachRateLimit())
-    .use(attachHelpers)
     .use(attachUser)
 
   bot.on('message', startRoute)

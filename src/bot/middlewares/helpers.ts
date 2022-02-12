@@ -14,7 +14,7 @@ export async function attachHelpers(ctx: Context, next: () => void) {
   return next()
 }
 
-export const whois = (from?: User) => {
+const whois = (from?: User) => {
   if (from) {
     const id = from.id
     const firstName = from.first_name
